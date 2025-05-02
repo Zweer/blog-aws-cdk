@@ -1,0 +1,125 @@
+name: "📝 Nuovo Articolo Serie CDK"
+description: Template per pianificare un nuovo articolo della serie AWS CDK in Italiano.
+title: "[CDK] - Titolo Provvisorio Parte X"
+labels:
+  - "serie: cdk"
+  - articolo
+  - todo
+assignees:
+  - Zweer
+projects:
+  - Zweer/2
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎯 Obiettivo Articolo (Epica)
+        *Qual è lo scopo principale di questo articolo? Cosa imparerà il lettore?*
+  - type: textarea
+    id: epica
+    attributes:
+      label: Epica / Obiettivo Principale
+      description: Descrivi l'obiettivo formativo e il contenuto chiave dell'articolo.
+      placeholder: Es: Introdurre i concetti di Stack e Constructs (L1/L2), guidare nel deploy di un Bucket S3, mostrare `synth`/`deploy`/`destroy`.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 👤 User Story
+        *Dal punto di vista del lettore.*
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: Scrivi la user story nel formato "Come [tipo di utente], voglio [azione], così da [obiettivo]".
+      placeholder: Es: Come sviluppatore/sviluppatrice che ha inizializzato un progetto CDK, voglio imparare a definire un Bucket S3..., così da poter creare e gestire la mia prima risorsa cloud.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## ☁️ Infrastruttura Creata
+        *Quali risorse AWS verranno definite e deployate?*
+  - type: textarea
+    id: infrastruttura
+    attributes:
+      label: Risorse AWS Coinvolte
+      description: Elenca le principali risorse AWS create o gestite in questo articolo tramite CDK.
+      placeholder: |
+        - Bucket S3 (Standard)
+        - Stack CloudFormation associato
+        - Ruoli/Policy IAM (se rilevanti e specifici)
+        - Funzione Lambda (Node.js)
+        - API Gateway (HTTP API)
+        - Coda SQS (Standard)
+        - Tabella DynamoDB (On-Demand o Low Provisioned)
+        - Parametro SSM (Standard)
+        - CodePipeline / CodeBuild
+      render: markdown
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 💰 Note sul Free Tier AWS
+        *Verifica esplicita della compatibilità con il piano gratuito.*
+  - type: textarea
+    id: free-tier
+    attributes:
+      label: Analisi Compatibilità Free Tier
+      description: Per ogni risorsa listata sopra, spiega BREVEMENTE come rientra nel Free Tier AWS o quali sono i limiti/caveat. **Evidenzia chiaramente eventuali costi potenziali, anche minimi.**
+      placeholder: |
+        - **Bucket S3:** Rientra (Free Tier: 5GB storage, 20k GET, 2k PUT).
+        - **Lambda:** Rientra (Free Tier: 1M richieste/mese, 400k GB-sec).
+        - **API Gateway (HTTP API):** Rientra (Free Tier: 1M chiamate/mese).
+        - **DynamoDB:** Rientra (Free Tier: 25GB, 25 WCU/RCU o On-Demand equivalente). Usare capacità basse o On-Demand.
+        - **SQS:** Rientra (Free Tier: 1M richieste/mese).
+        - **SSM Parameter (Standard):** Rientra (Gratuito, 10k interazioni/mese).
+        - **CloudFormation:** Gratuito (si pagano le risorse create).
+        - **IAM:** Gratuito.
+        - **CloudWatch Logs:** Rientra (Free Tier: 5GB ingestione/mese).
+        - **CodeBuild:** Rientra (Free Tier: 100 min/mese build.general1.small).
+        - **CodePipeline:** **ATTENZIONE:** Solo UNA pipeline attiva è gratuita al mese. Se l'utente ne ha altre, questa avrà un costo. **DISCLAIMER NECESSARIO.**
+      render: markdown
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### 📚 Risorse Utili / Link
+        *Eventuali link a documentazione specifica, altri articoli, ecc.*
+  - type: textarea
+    id: links
+    attributes:
+      label: Link e Risorse
+      description: Aggiungi link utili per la scrittura o che verranno inclusi nell'articolo.
+      placeholder: |
+        - Link Documentazione Ufficiale AWS: ...
+        - Link Articolo Precedente: ...
+        - Link Repository GitHub (cartella specifica): ...
+
+  - type: markdown
+    attributes:
+      value: |
+        ### ✅ Checklist Autore
+        *Stato avanzamento lavori.*
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Task Articolo
+      description: Segna i task completati.
+      options:
+        - label: Scaletta dettagliata definita
+        - label: Codice CDK scritto e funzionante (nella cartella dedicata)
+        - label: Test CDK scritti (se applicabile)
+        - label: Prima bozza articolo scritta
+        - label: Revisione tecnica e grammaticale completata
+        - label: Note Free Tier accurate e verificate
+        - label: Articolo pubblicato
+        - label: Link articolo aggiunto a questa issue
