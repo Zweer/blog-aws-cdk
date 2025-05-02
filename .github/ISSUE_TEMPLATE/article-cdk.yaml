@@ -1,6 +1,6 @@
-name: "📝 Nuovo Articolo Serie CDK"
+name: 📝 Nuovo Articolo Serie CDK
 description: Template per pianificare un nuovo articolo della serie AWS CDK in Italiano.
-title: "[CDK] - Titolo Provvisorio Parte X"
+title: "[CDK] Titolo Provvisorio Parte X"
 labels:
   - "serie: cdk"
   - articolo
@@ -20,7 +20,7 @@ body:
     attributes:
       label: Epica / Obiettivo Principale
       description: Descrivi l'obiettivo formativo e il contenuto chiave dell'articolo.
-      placeholder: Es: Introdurre i concetti di Stack e Constructs (L1/L2), guidare nel deploy di un Bucket S3, mostrare `synth`/`deploy`/`destroy`.
+      placeholder: "Es: Introdurre i concetti di Stack e Constructs (L1/L2), guidare nel deploy di un Bucket S3, mostrare `synth`/`deploy`/`destroy`."
     validations:
       required: true
 
@@ -34,7 +34,7 @@ body:
     attributes:
       label: User Story
       description: Scrivi la user story nel formato "Come [tipo di utente], voglio [azione], così da [obiettivo]".
-      placeholder: Es: Come sviluppatore/sviluppatrice che ha inizializzato un progetto CDK, voglio imparare a definire un Bucket S3..., così da poter creare e gestire la mia prima risorsa cloud.
+      placeholder: "Es: Come sviluppatore/sviluppatrice che ha inizializzato un progetto CDK, voglio imparare a definire un Bucket S3..., così da poter creare e gestire la mia prima risorsa cloud."
     validations:
       required: true
 
