@@ -58,7 +58,6 @@ body:
         - Tabella DynamoDB (On-Demand o Low Provisioned)
         - Parametro SSM (Standard)
         - CodePipeline / CodeBuild
-      render: markdown
     validations:
       required: true
 
@@ -84,7 +83,6 @@ body:
         - **CloudWatch Logs:** Rientra (Free Tier: 5GB ingestione/mese).
         - **CodeBuild:** Rientra (Free Tier: 100 min/mese build.general1.small).
         - **CodePipeline:** **ATTENZIONE:** Solo UNA pipeline attiva è gratuita al mese. Se l'utente ne ha altre, questa avrà un costo. **DISCLAIMER NECESSARIO.**
-      render: markdown
     validations:
       required: true
 
